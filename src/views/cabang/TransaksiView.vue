@@ -21,7 +21,7 @@ const formError = ref('')
 const currentPage = ref(1)
 const perPage = 10
 
-const today = new Date().toISOString().split('T')[0]
+const today = new Date(new Date().getTime() + 7 * 60 * 60 * 1000).toISOString().split('T')[0]
 const tanggal = ref(today)
 
 const cabangId = computed(() => auth.user?.cabang_id)
